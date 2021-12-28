@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // import robotic from "../../../images/robot.png";
 // import cognitive from "../../../images/cognitive.png";
 // import disability from "../../../images/disability.png";
 // import security from "../../../images/camera.png";
 // import humanBehavior from "../../../images/consumer-behaviour.png";
 // import autoTag from "../../../images/label.png";
-import { Link } from "react-router-dom";
 
 const Solutions = () => {
   const [solutions, setSolutions] = useState([]);
   useEffect(() => {
-    fetch("./solutions.JSON")
+    fetch("http://localhost:5000/solutions")
       .then((res) => res.json())
       .then((data) => setSolutions(data));
   }, []);
@@ -26,9 +26,12 @@ const Solutions = () => {
           </p>
 
           <div className="md:px-1 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 space-y-4 md:space-y-0 container">
-            {solutions.map((solution, index) => {
+            {solutions.map((solution) => {
               return (
-                <div key={index} className=" bg-white px-4 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
+                <div
+                  key={solution._id}
+                  className=" bg-white px-4 pt-6 pb-2 rounded-xl shadow-lg transform hover:scale-105 transition duration-500"
+                >
                   <div className="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
                     <div className="p-3 text-white  rounded-full">
                       <img
@@ -44,7 +47,7 @@ const Solutions = () => {
                       {solution.shortDescription}
                     </p>
                     <Link
-                      to="/gg"
+                      to={`/${solution._id}`}
                       className="text-indigo-500 inline-flex items-center"
                     >
                       Discover More

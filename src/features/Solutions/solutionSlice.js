@@ -8,7 +8,7 @@ export const getPosts = createAsyncThunk(
     // console.log({ todos })
     // you can dispatch any action from here!
     // dispatch(del(2))
-    return fetch("./solutions.JSON").then((res) => res.json());
+    return fetch("http://localhost:5000/solutions").then((res) => res.json());
   }
 );
 
