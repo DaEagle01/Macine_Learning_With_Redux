@@ -6,19 +6,19 @@ const Login = () => {
   const [data, setData] = useState({});
   const [error, setError] = useState("");
   const auth = getAuth();
-  const [isLoading, setIsLoading] = useState(true);
-  const { handleGoogleSignIn, handleSignIn, saveUser, u } = "useAuth()";
+  const [isLoading, setIsLoading] = useState(false);
+  
 
-  const location = "useLocation()";
-  const history = "useHistory()";
-  const redirect_uri = location.state?.from || "/home";
+  // const location = "useLocation()";
+  // const history = "useHistory()";
+  // const redirect_uri = location.state?.from || "/home";
 
-  const handleGoogleLogIn = () => {
-    handleGoogleSignIn().then((result) => {
-      const user = result.user;
-      saveUser(user.email, user.displayName);
-    });
-  };
+  // const handleGoogleLogIn = () => {
+  //   handleGoogleSignIn().then((result) => {
+  //     const user = result.user;
+  //     saveUser(user.email, user.displayName);
+  //   });
+  // };
 
   const handleSignInInfo = (e) => {
     const field = e.target.name;
@@ -61,7 +61,7 @@ const Login = () => {
                 <input
                   type="email"
                   name="email"
-                  onBlur={handleSignInInfo}
+                  onChange={handleSignInInfo}
                   id="email"
                   placeholder="Enter Email Address"
                   class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
@@ -76,7 +76,7 @@ const Login = () => {
                 <input
                   type="password"
                   name="password"
-                  onBlur={handleSignInInfo}
+                  onChange={handleSignInInfo}
                   id="password"
                   placeholder="Enter Password"
                   minlength="6"
@@ -124,7 +124,7 @@ const Login = () => {
             >
               <div
                 class="flex items-center justify-center"
-                onClick={handleGoogleLogIn}
+                // onClick={handleGoogleLogIn}
               >
                 <svg class="w-6 h-6" viewBox="0 0 48 48">
                   <defs>

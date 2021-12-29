@@ -4,11 +4,15 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../../../../src/images/logo-removebg-preview.png";
 import { getAuth, signOut } from "firebase/auth";
+import { selectUser } from "../../../features/user/userSlice";
+import { useSelector } from "react-redux";
 
 <HashLink to="/some/path#with-hash-fragment">Link to Hash Fragment</HashLink>;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const user = useSelector(selectUser);
+  console.log(user);
   const auth = getAuth();
   const handleLogOut = () => {
     if (window.confirm("Are you sure you want to logout?")) {
@@ -19,6 +23,7 @@ const Header = () => {
         });
     }
   };
+
   return (
     <div>
       <nav style={{}} className="bg-purple-100 text-gray-800">
@@ -40,7 +45,7 @@ const Header = () => {
                     </Link>
 
                     <Link
-                      to="/"
+                      to="/solutions"
                       className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Solutions
@@ -65,19 +70,23 @@ const Header = () => {
                     >
                       Contact
                     </Link>
-                    <Link
-                      to="/login"
-                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      to="/"
-                      onClick={handleLogOut}
-                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Logout
-                    </Link>
+
+                    {user?.email || user?.name ? (
+                      <Link
+                        to="/"
+                        onClick={handleLogOut}
+                        className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                      >
+                        Logout
+                      </Link>
+                    ) : (
+                      <Link
+                        to="/login"
+                        className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                      >
+                        Login
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>
@@ -151,10 +160,10 @@ const Header = () => {
                   Home
                 </Link>
                 <Link
-                  to="/"
+                  to="/solutions"
                   className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Projects
+                  Solututions
                 </Link>
                 <Link
                   to="/"
@@ -175,13 +184,22 @@ const Header = () => {
                 >
                   Contact
                 </Link>
-                <Link
-                  to="/"
-                  onClick={handleLogOut}
-                  className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Logout
-                </Link>
+                {user?.email || user?.name ? (
+                  <Link
+                    to="/"
+                    onClick={handleLogOut}
+                    className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Logout
+                  </Link>
+                ) : (
+                  <Link
+                    to="/login"
+                    className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           )}

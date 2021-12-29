@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const Solutions = () => {
   const [solutions, setSolutions] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/solutions")
+    fetch("https://serene-harbor-07790.herokuapp.com/solutions")
       .then((res) => res.json())
       .then((data) => setSolutions(data));
   }, []);
@@ -18,12 +18,14 @@ const Solutions = () => {
     <div>
       <section className="py-20 bg-white">
         <div className="container max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold tracking-tight text-center">
-            Solutions We Offer
-          </h2>
-          <p className="mt-2 text-lg text-center text-gray-600">
-            Check out our list of awesome features below.
-          </p>
+          <div className="mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-center">
+              Solutions We Offer
+            </h2>
+            <p className="mt-2 text-xl md:text-2xl text-center text-gray-600">
+              List of awesome features below
+            </p>
+          </div>
 
           <div className="md:px-1 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 space-y-4 md:space-y-0 container">
             {solutions.map((solution) => {

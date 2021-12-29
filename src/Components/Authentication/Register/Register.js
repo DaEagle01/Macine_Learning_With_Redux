@@ -14,10 +14,9 @@ initializeAuthentication();
 
 const Register = () => {
   const user = useSelector(selectUser);
-  const [isRegister, setIsRegister] = useState(false);
   const [data, setData] = useState({});
   const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
   const auth = getAuth();
@@ -28,7 +27,6 @@ const Register = () => {
     const newdata = { ...data };
     newdata[field] = value;
     setData(newdata);
-    console.log(data);
   };
 
   const handleRegister = (e) => {
@@ -45,7 +43,7 @@ const Register = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        alert("Registered Successfully!");
+        console.log(user)
       })
       .catch((error) => {
         setError(error.message);
@@ -74,13 +72,10 @@ const Register = () => {
       }
     });
     return () => unsubscribed;
-  }, [user]);
+  }, [dispatch, auth, user]);
 
   return (
     <div>
-      {user
-        ? console.log("user is logged in")
-        : console.log("user is not yet logged in.")}
       <div class="grid min-h-screen place-items-center">
         <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
           <div class="text-xl text-center font-semibold">
@@ -99,7 +94,7 @@ const Register = () => {
                 id="name"
                 type="text"
                 name="name"
-                onBlur={handleRegisterInfo}
+                onChange={handleRegisterInfo}
                 placeholder="Abd Ullah"
                 autocomplete="given-name"
                 class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
@@ -117,7 +112,7 @@ const Register = () => {
               id="email"
               type="email"
               name="email"
-              onBlur={handleRegisterInfo}
+              onChange={handleRegisterInfo}
               placeholder="john.doe@company.com"
               autocomplete="email"
               class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
@@ -133,7 +128,7 @@ const Register = () => {
               id="password"
               type="password"
               name="password"
-              onBlur={handleRegisterInfo}
+              onChange={handleRegisterInfo}
               placeholder="********"
               autocomplete="new-password"
               class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
@@ -149,7 +144,7 @@ const Register = () => {
               id="password-confirm"
               type="password"
               name="password2"
-              onBlur={handleRegisterInfo}
+              onChange={handleRegisterInfo}
               placeholder="********"
               autocomplete="new-password"
               class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"

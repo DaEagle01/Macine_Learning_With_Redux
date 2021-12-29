@@ -37,10 +37,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -50,9 +50,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -60,10 +60,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -73,10 +73,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -96,10 +96,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -109,10 +109,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -122,9 +122,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -132,10 +132,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -145,10 +145,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -158,9 +158,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -168,10 +168,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -181,10 +181,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -194,9 +194,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -204,10 +204,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -217,10 +217,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -230,9 +230,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -240,10 +240,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -253,10 +253,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -266,9 +266,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -276,10 +276,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -289,10 +289,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -302,9 +302,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -312,10 +312,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
@@ -325,10 +325,10 @@ const Testimonial = () => {
           <div class="flex items-center justify-center px-5 py-5">
             <div class="w-full mx-auto max-w-xl rounded-lg bg-white dark:bg-gray-800 shadow-lg px-5 pt-5 pb-10 text-gray-800 dark:text-gray-50">
               <div class=" w-16 pt-1 text-center pb-5 -mt-16 mx-auto">
-                <a href="#" class="block relative">
+                <a href="#nothing" class="block relative">
                   <img
                     alt="profil"
-                    src="https://cdn-icons.flaticon.com/png/512/2202/premium/2202112.png?token=exp=1640697434~hmac=b84af1b00291cc8d122e992c1e569493"
+                    src="https://indatalabs.com/wp-content/uploads/2021/10/main-pavel-nurminskiy.jpeg"
                     class="mx-auto object-cover rounded-full "
                   />
                 </a>
@@ -338,9 +338,9 @@ const Testimonial = () => {
                   “
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-100 text-center px-5">
-                  To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself
+                  Their competence in data science, machine learning is second
+                  to none. The algorithms and methods were extremely
+                  well-explained and documented.
                 </p>
                 <div class="text-3xl text-indigo-500 text-right leading-tight h-3 -mt-3">
                   ”
@@ -348,10 +348,10 @@ const Testimonial = () => {
               </div>
               <div class="w-full">
                 <p class="text-md text-indigo-500 font-bold text-center">
-                  Tom Hardy
+                  John Simpson
                 </p>
                 <p class="text-xs text-gray-500 dark:text-gray-300 text-center">
-                  @thom.hardy
+                  @simp.son
                 </p>
               </div>
             </div>
