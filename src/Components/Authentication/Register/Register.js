@@ -8,7 +8,6 @@ import {
   getAuth,
   onAuthStateChanged,
 } from "firebase/auth";
-import Home from "../../HomePage/Home/Home";
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
@@ -75,7 +74,7 @@ const Register = () => {
       }
     });
     return () => unsubscribed;
-  }, [auth]);
+  }, [user]);
 
   return (
     <div>

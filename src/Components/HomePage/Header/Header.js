@@ -32,54 +32,52 @@ const Header = () => {
                 <div className="ml-10 flex items-center justify-center space-x-4">
                   <div></div>
                   <div>
-                    <a
-                      href="#home"
-                      className=" hover:bg-gray-700  text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                    <Link
+                      to="/"
+                      className=" hover:bg-purple-300  text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Home
-                    </a>
+                    </Link>
 
-                    <a
-                      href="#projects"
-                      className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                    <Link
+                      to="/"
+                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
-                      Projects
-                    </a>
-
-                    <a
-                      href="https://drive.google.com/file/d/1IGrfFHGz6x2_-Zg0GtYca8tFs9JdXtXS/view"
-                      target="/blank"
-                      className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Resume
-                    </a>
+                      Solutions
+                    </Link>
 
                     <Link
                       to="/blog"
-                      className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Blog
                     </Link>
-                    <a
-                      href="#about"
-                      className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                    <Link
+                      to=""
+                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       About
-                    </a>
+                    </Link>
 
-                    <a
-                      href="#contact"
-                      className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                    <Link
+                      to="/"
+                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Contact
-                    </a>
-                    <a
-                      href="#contact"
+                    </Link>
+                    <Link
+                      to="/login"
+                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      to="/"
                       onClick={handleLogOut}
-                      className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                      className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Logout
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -88,7 +86,7 @@ const Header = () => {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover: text-gray-800 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-purple-200 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover: text-gray-800 hover:bg-purple-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-600 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -142,46 +140,48 @@ const Header = () => {
         >
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                  href="#nothing"
-                  className="hover:bg-gray-700  text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+              <div
+                ref={ref}
+                className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center"
+              >
+                <Link
+                  to="/"
+                  className="hover:bg-purple-300  text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Home
-                </a>
-                <a
-                  href="#nothing"
-                  className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+                </Link>
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Projects
-                </a>
-                <a
-                  href="https://drive.google.com/file/d/1IGrfFHGz6x2_-Zg0GtYca8tFs9JdXtXS/view"
-                  target="/blank"
-                  className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+                </Link>
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Resume
-                </a>
+                </Link>
 
-                <a
-                  href="#nothing"
-                  className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   About
-                </a>
-                <a
-                  href="#nothing"
-                  className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+                </Link>
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact
-                </a>
-                <a
-                  href="#nothing"
+                </Link>
+                <Link
+                  to="/"
                   onClick={handleLogOut}
-                  className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:bg-purple-300 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Logout
-                </a>
+                </Link>
               </div>
             </div>
           )}
