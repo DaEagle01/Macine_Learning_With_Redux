@@ -3,11 +3,22 @@ import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../../../../src/images/logo-removebg-preview.png";
+import { getAuth, signOut } from "firebase/auth";
 
 <HashLink to="/some/path#with-hash-fragment">Link to Hash Fragment</HashLink>;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const auth = getAuth();
+  const handleLogOut = () => {
+    if (window.confirm("Are you sure you want to logout?")) {
+      signOut(auth)
+        .then("sign out successfully!", console.log("loggedout successfully"))
+        .catch((error) => {
+          console.log(error.message);
+        });
+    }
+  };
   return (
     <div>
       <nav style={{}} className="bg-purple-100 text-gray-800">
@@ -61,6 +72,13 @@ const Header = () => {
                       className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Contact
+                    </a>
+                    <a
+                      href="#contact"
+                      onClick={handleLogOut}
+                      className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                      Logout
                     </a>
                   </div>
                 </div>
@@ -156,6 +174,13 @@ const Header = () => {
                   className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Contact
+                </a>
+                <a
+                  href="#nothing"
+                  onClick={handleLogOut}
+                  className="text-gray-300 hover:bg-gray-700 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Logout
                 </a>
               </div>
             </div>

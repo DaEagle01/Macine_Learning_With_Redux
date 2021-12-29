@@ -20,7 +20,7 @@ function App() {
           <Route path="/solutions" element={<Solutions />}></Route>
           <Route path=":_id" element={<Solution></Solution>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
-          <Route path="/register" element={<Register></Register>}></Route>
+          <Route path="/signup" element={<Register></Register>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

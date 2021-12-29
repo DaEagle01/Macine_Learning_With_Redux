@@ -1,8 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
-  const isLoading = null;
+  const [data, setData] = useState({});
+  const [error, setError] = useState("");
+  const auth = getAuth();
+  const [isLoading, setIsLoading] = useState(true);
+  const { handleGoogleSignIn, handleSignIn, saveUser, u } = "useAuth()";
+
+  const location = "useLocation()";
+  const history = "useHistory()";
+  const redirect_uri = location.state?.from || "/home";
+
+  const handleGoogleLogIn = () => {
+    handleGoogleSignIn().then((result) => {
+      const user = result.user;
+      saveUser(user.email, user.displayName);
+    });
+  };
+
+  const handleSignInInfo = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newdata = { ...data };
+    newdata[field] = value;
+    setData(newdata);
+    console.log(data);
+  };
+  const handleEmailPassSignIn = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    signInWithEmailAndPassword(auth, data.email, data.password)
+      .then((result) => {
+        alert("signed in successfully");
+      })
+      .catch((error) => {
+        setError(error.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
+
   return (
     <div>
       <div>
@@ -15,16 +55,13 @@ const Login = () => {
               Log in to your account
             </h1>
 
-            <form
-              class="mt-6"
-              //   onSubmit={handleEmailPassSignIn}
-            >
+            <form class="mt-6" onSubmit={handleEmailPassSignIn}>
               <div>
                 <label class="block text-gray-700">Email Address</label>
                 <input
                   type="email"
                   name="email"
-                  //   onBlur={handleSignInInfo}
+                  onBlur={handleSignInInfo}
                   id="email"
                   placeholder="Enter Email Address"
                   class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
@@ -39,7 +76,7 @@ const Login = () => {
                 <input
                   type="password"
                   name="password"
-                  //   onBlur={handleSignInInfo}
+                  onBlur={handleSignInInfo}
                   id="password"
                   placeholder="Enter Password"
                   minlength="6"
@@ -76,9 +113,9 @@ const Login = () => {
               </button>
             )}
             {/* {user?.email && (
-              <Alert severity="success">Login successfully!</Alert>
+              <alert severity="success">Login successfully!</alert>
             )} */}
-            {/* {error && <Alert severity="error">{error}</Alert>} */}
+            {error && <alert severity="error">{error}</alert>}
             <hr class="my-6 border-gray-300 w-full" />
 
             <button
@@ -87,7 +124,7 @@ const Login = () => {
             >
               <div
                 class="flex items-center justify-center"
-                // onClick={handleGoogleLogIn}
+                onClick={handleGoogleLogIn}
               >
                 <svg class="w-6 h-6" viewBox="0 0 48 48">
                   <defs>
@@ -127,10 +164,11 @@ const Login = () => {
             <p class="mt-8">
               Need an account?{" "}
               <Link
-                to="/register"
+                to="/signup"
+                style={{ textDecoration: "none" }}
                 class="text-blue-500 hover:text-blue-700 font-semibold"
               >
-                Create an account
+                Login here
               </Link>
             </p>
           </div>
