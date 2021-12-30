@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Pricing = () => {
   return (
@@ -10,7 +11,7 @@ const Pricing = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="box-border mt-2 text-xl text-gray-900 border-solid sm:text-2xl">
-              Pricing to fit the needs of any companie size.
+              Pricing to fit the needs of any company size.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4 mt-4 leading-7 text-gray-900 border-0 border-gray-200 sm:mt-6 sm:gap-6 md:mt-8 md:gap-0 lg:grid-cols-3">
@@ -21,7 +22,7 @@ const Pricing = () => {
               </h3>
               <div className="flex items-end mt-6 leading-7 text-gray-900 border-0 border-gray-200">
                 <p className="box-border m-0 text-6xl font-semibold leading-none border-solid">
-                  $5
+                  $35
                 </p>
                 <p
                   className="box-border m-0 border-solid"
@@ -86,9 +87,13 @@ const Pricing = () => {
                   Customizations
                 </li>
               </ul>
-              <button className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-purple-600 no-underline bg-transparent border border-purple-600 rounded-md cursor-pointer hover:bg-purple-700 hover:border-purple-700 hover:text-white focus-within:bg-purple-700 focus-within:border-purple-700 focus-within:text-white sm:text-base md:text-lg">
+              <Link
+                to="/starterplan"
+                className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-purple-600 no-underline bg-transparent border border-purple-600 rounded-md cursor-pointer hover:bg-purple-700 hover:border-purple-700 hover:text-white focus-within:bg-purple-700 focus-within:border-purple-700 focus-within:text-white sm:text-base md:text-lg"
+              >
+                {" "}
                 Select Plan
-              </button>
+              </Link>
             </div>
             {/* Price 2  */}
             <div className="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0 bg-white border-4 border-purple-600 border-solid rounded-lg sm:p-6 md:px-8 md:py-16">
@@ -97,7 +102,7 @@ const Pricing = () => {
               </h3>
               <div className="flex items-end mt-6 leading-7 text-gray-900 border-0 border-gray-200">
                 <p className="box-border m-0 text-6xl font-semibold leading-none border-solid">
-                  $15
+                  $70
                 </p>
                 <p
                   className="box-border m-0 border-solid"
@@ -179,9 +184,13 @@ const Pricing = () => {
                   Premium Support
                 </li>
               </ul>
-              <button className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-white no-underline bg-purple-600 border rounded-md cursor-pointer hover:bg-purple-700 hover:border-purple-700 hover:text-white focus-within:bg-purple-700 focus-within:border-purple-700 focus-within:text-white sm:text-base md:text-lg">
+              <Link
+                to="/basicplan"
+                className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-white no-underline bg-purple-600 border rounded-md cursor-pointer hover:bg-purple-700 hover:border-purple-700 hover:text-white focus-within:bg-purple-700 focus-within:border-purple-700 focus-within:text-white sm:text-base md:text-lg"
+              >
+                {" "}
                 Select Plan
-              </button>
+              </Link>
             </div>
             {/* Price 3   */}
             <div className="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 border border-solid rounded-lg lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
@@ -190,7 +199,7 @@ const Pricing = () => {
               </h3>
               <div className="flex items-end mt-6 leading-7 text-gray-900 border-0 border-gray-200">
                 <p className="box-border m-0 text-6xl font-semibold leading-none border-solid">
-                  $25
+                  $120
                 </p>
                 <p
                   className="box-border m-0 border-solid"
@@ -272,9 +281,13 @@ const Pricing = () => {
                   Company Evaluations
                 </li>
               </ul>
-              <button className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-purple-600 no-underline bg-transparent border border-purple-600 rounded-md cursor-pointer hover:bg-purple-700 hover:border-purple-700 hover:text-white focus-within:bg-purple-700 focus-within:border-purple-700 focus-within:text-white sm:text-base md:text-lg">
+              <Link
+                to="/plusplan"
+                className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-purple-600 no-underline bg-transparent border border-purple-600 rounded-md cursor-pointer hover:bg-purple-700 hover:border-purple-700 hover:text-white focus-within:bg-purple-700 focus-within:border-purple-700 focus-within:text-white sm:text-base md:text-lg"
+              >
+                {" "}
                 Select Plan
-              </button>
+              </Link>
             </div>
           </div>
         </div>

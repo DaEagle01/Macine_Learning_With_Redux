@@ -8,6 +8,9 @@ import Header from "./Components/HomePage/Header/Header";
 import Footer from "./Components/HomePage/Footer/Footer";
 import Login from "./Components/Authentication/Login/Login";
 import Register from "./Components/Authentication/Register/Register";
+import Starter from "./Components/HomePage/Purchase/Starter";
+import Basic from "./Components/HomePage/Purchase/Basic";
+import Plus from "./Components/HomePage/Purchase/Plus";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path=":_id" element={<Solution></Solution>}></Route>
           <Route path="/login" element={<Login></Login>}></Route>
           <Route path="/signup" element={<Register></Register>}></Route>
+          <Route path="/starterplan" element={<Starter></Starter>}></Route>
+          <Route path="/basicplan" element={<Basic></Basic>}></Route>
+          <Route path="/plusplan" element={<Plus></Plus>}></Route>
         </Routes>
         <Footer></Footer>
       </BrowserRouter>

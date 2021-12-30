@@ -59,6 +59,7 @@ const Register = () => {
         dispatch(
           login({
             id: user.uid,
+            email: user.email,
             name: user.displayName ? user.displayName : user.email,
             lastSignIn: user.metadata.lastSignInTime,
             verified: String(user.emailVerified),

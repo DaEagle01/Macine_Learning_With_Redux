@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import logo from "../../../../src/images/logo-removebg-preview.png";
 import { getAuth, signOut } from "firebase/auth";
 import { selectUser } from "../../../features/user/userSlice";
 import { useSelector } from "react-redux";
 
-<HashLink to="/some/path#with-hash-fragment">Link to Hash Fragment</HashLink>;
-
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const user = useSelector(selectUser);
-  console.log(user);
+  console.log(user)
   const auth = getAuth();
   const handleLogOut = () => {
     if (window.confirm("Are you sure you want to logout?")) {
@@ -31,7 +28,6 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
               <Link to="/">
-                
                 {" "}
                 <img src={logo} alt="" className="h-16 w-24" />
               </Link>

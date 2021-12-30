@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import robotic from "../../../images/robot.png";
-// import cognitive from "../../../images/cognitive.png";
-// import disability from "../../../images/disability.png";
-// import security from "../../../images/camera.png";
-// import humanBehavior from "../../../images/consumer-behaviour.png";
-// import autoTag from "../../../images/label.png";
 
 const Solutions = () => {
   const [solutions, setSolutions] = useState([]);
