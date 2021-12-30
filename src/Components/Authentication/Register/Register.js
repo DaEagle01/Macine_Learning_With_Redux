@@ -43,7 +43,7 @@ const Register = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user)
+        console.log(user);
       })
       .catch((error) => {
         setError(error.message);
@@ -76,17 +76,17 @@ const Register = () => {
 
   return (
     <div>
-      <div class="grid min-h-screen place-items-center">
-        <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
-          <div class="text-xl text-center font-semibold">
-            Hello there 👋, <p class="font-normal">Create an account</p>
+      <div className="grid min-h-screen place-items-center">
+        <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
+          <div className="text-xl text-center font-semibold">
+            Hello there 👋, <p className="font-normal">Create an account</p>
           </div>
 
-          <form class="mt-6" onSubmit={handleRegister}>
-            <span class="w-1/2">
+          <form className="mt-6" onSubmit={handleRegister}>
+            <span className="w-1/2">
               <label
                 for="Fullname"
-                class="block text-xs font-semibold text-gray-600 uppercase"
+                className="block text-xs font-semibold text-gray-600 uppercase"
               >
                 Fullname
               </label>
@@ -97,14 +97,14 @@ const Register = () => {
                 onChange={handleRegisterInfo}
                 placeholder="Abd Ullah"
                 autocomplete="given-name"
-                class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
                 required
               />
             </span>
 
             <label
               for="email"
-              class="block mt-2 text-xs font-semibold text-gray-600 uppercase"
+              className="block mt-2 text-xs font-semibold text-gray-600 uppercase"
             >
               E-mail
             </label>
@@ -115,12 +115,12 @@ const Register = () => {
               onChange={handleRegisterInfo}
               placeholder="john.doe@company.com"
               autocomplete="email"
-              class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+              className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
               required
             />
             <label
               for="password"
-              class="block mt-2 text-xs font-semibold text-gray-600 uppercase"
+              className="block mt-2 text-xs font-semibold text-gray-600 uppercase"
             >
               Password
             </label>
@@ -131,12 +131,12 @@ const Register = () => {
               onChange={handleRegisterInfo}
               placeholder="********"
               autocomplete="new-password"
-              class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+              className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
               required
             />
             <label
               for="password-confirm"
-              class="block mt-2 text-xs font-semibold text-gray-600 uppercase"
+              className="block mt-2 text-xs font-semibold text-gray-600 uppercase"
             >
               Confirm password
             </label>
@@ -147,21 +147,21 @@ const Register = () => {
               onChange={handleRegisterInfo}
               placeholder="********"
               autocomplete="new-password"
-              class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+              className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
               required
             />
             <button
               type="submit"
-              class="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-purple-600 shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none"
+              className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-purple-600 shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none"
             >
               Sign up
             </button>
-            <p class=" inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
+            <p className=" inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
               Already registered?{" "}
               <Link
                 to="/login"
                 style={{ textDecoration: "none" }}
-                class="text-blue-500 hover:text-blue-700 font-semibold"
+                className="text-blue-500 hover:text-blue-700 font-semibold"
               >
                 Login here
               </Link>
@@ -169,9 +169,9 @@ const Register = () => {
           </form>
 
           {isLoading && (
-            <button type="button" class="bg-rose-600 ..." disabled>
+            <button type="button" className="bg-rose-600 ..." disabled>
               <svg
-                class="animate-spin h-5 w-5 mr-3 ..."
+                className="animate-spin h-5 w-5 mr-3 ..."
                 viewBox="0 0 24 24"
               ></svg>
               Processing

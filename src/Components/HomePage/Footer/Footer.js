@@ -13,9 +13,9 @@ const Footer = () => {
           ></path>
         </svg>
       </div>
-      <footer class="bg-purple-100 border-gray-200">
+      <footer className="bg-purple-100 border-gray-200">
         <div
-          class="
+          className="
           container
           flex flex-col flex-wrap
           px-4
@@ -26,23 +26,23 @@ const Footer = () => {
           md:flex-row md:flex-nowrap
         "
         >
-          <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
+          <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
             <a
               href="#nothing"
-              class=" flex items-center justify-center text-4xl font-bold text-purple-700 md:justify-start "
+              className=" flex items-center justify-center text-4xl font-bold text-purple-700 md:justify-start "
             >
               Machine AI
             </a>
-            <p class="mt-2 text-sm text-justify text-gray-500">
+            <p className="mt-2 text-sm text-justify text-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium at sequi cum, impedit fuga in placeat illo eum minima
               possimus est perferendis distinctio explicabo eos natus
               consequuntur blanditiis odio optio?
             </p>
-            <div class="flex mt-4">
+            <div className="flex mt-4">
               <input
                 type="text"
-                class="
+                className="
                 h-auto
                 p-2
                 text-sm
@@ -52,57 +52,57 @@ const Footer = () => {
               "
                 placeholder="Your email address"
               />
-              <button class="h-auto p-3 text-xs text-white bg-red-600 rounded-sm">
+              <button className="h-auto p-3 text-xs text-white bg-red-600 rounded-sm">
                 Subscribe
               </button>
             </div>
-            <div class="flex justify-center mt-4 lg:mt-2">
+            <div className="flex justify-center mt-4 lg:mt-2">
               <a href="#nothing">
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  class="w-6 h-6 text-blue-600"
+                  className="w-6 h-6 text-blue-600"
                   viewBox="0 0 24 24"
                 >
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                 </svg>
               </a>
-              <a href="#nothing" class="ml-3">
+              <a href="#nothing" className="ml-3">
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  class="w-6 h-6 text-blue-300"
+                  className="w-6 h-6 text-blue-300"
                   viewBox="0 0 24 24"
                 >
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                 </svg>
               </a>
-              <a href="#nothing" class="ml-3">
+              <a href="#nothing" className="ml-3">
                 <svg
                   fill="none"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  class="w-6 h-6 text-pink-400"
+                  className="w-6 h-6 text-pink-400"
                   viewBox="0 0 24 24"
                 >
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                 </svg>
               </a>
-              <a href="#nothing" class="ml-3">
+              <a href="#nothing" className="ml-3">
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="0"
-                  class="w-6 h-6 text-blue-500"
+                  className="w-6 h-6 text-blue-500"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -114,93 +114,135 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div class="justify-between w-full mt-4 md:ml-4 text-left lg:flex">
-            <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-              <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+          <div className="justify-between w-full mt-4 md:ml-4 text-left lg:flex">
+            <div className="w-full px-4 lg:w-1/3 md:w-1/2">
+              <h2 className="mb-2 font-bold tracking-widest text-gray-900">
                 Quick links
               </h2>
-              <ul class="mb-8 space-y-2 text-sm list-none">
+              <ul className="mb-8 space-y-2 text-sm list-none">
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Home
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Blogs
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Contact Us
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-              <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+            <div className="w-full px-4 lg:w-1/3 md:w-1/2">
+              <h2 className="mb-2 font-bold tracking-widest text-gray-900">
                 Solutions
               </h2>
-              <ul class="mb-8 space-y-2 text-sm list-none">
+              <ul className="mb-8 space-y-2 text-sm list-none">
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Security & Surveillance{" "}
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Robotic Automation{" "}
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Cognitive Automation
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Cognitive Engagement
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Identify Human Behavior
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Automatic Tagging
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-              <h2 class="mb-2 font-bold tracking-widest text-gray-900">
+            <div className="w-full px-4 lg:w-1/3 md:w-1/2">
+              <h2 className="mb-2 font-bold tracking-widest text-gray-900">
                 External Links
               </h2>
-              <ul class="mb-8 space-y-2 text-sm list-none">
+              <ul className="mb-8 space-y-2 text-sm list-none">
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Machine Learning
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Artificial Intelligence
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Data Science
                   </a>
                 </li>
                 <li>
-                  <a href="#nothing" class="text-gray-600 hover:text-gray-800">
+                  <a
+                    href="#nothing"
+                    className="text-gray-600 hover:text-gray-800"
+                  >
                     Blockchain Technology
                   </a>
                 </li>
@@ -208,8 +250,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class="flex justify-center ">
-          <p class="text-base text-gray-400">
+        <div className="flex justify-center ">
+          <p className="text-base text-gray-400">
             All rights reserved by @ Fahadcodes 2021
           </p>
         </div>
