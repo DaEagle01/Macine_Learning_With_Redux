@@ -12,7 +12,7 @@ const Basic = () => {
     data.plan = "basic";
     console.log(data);
 
-    fetch("http://localhost:5000/orders", {
+    fetch("https://serene-harbor-07790.herokuapp.com/orders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
