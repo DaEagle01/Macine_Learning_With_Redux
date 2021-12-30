@@ -27,8 +27,8 @@ const Basic = () => {
       });
   };
   return (
-    <div className="flex justify-center items-center">
-      <div className="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0 bg-white border-4 border-purple-600 border-solid rounded-lg sm:p-6 md:px-8 md:py-16">
+    <div className="flex flex-col md:flex-row justify-center items-center my-8 md:my-0 px-4">
+      <div className="relative z-20 flex flex-col items-center max-w-md p-4 mx-auto my-0 bg-white border-4 border-purple-600 border-solid rounded-lg sm:p-6 md:px-8 md:py-16 md:px-0">
         <h3 className="m-0 text-2xl font-semibold leading-tight tracking-tight text-black border-0 border-gray-200 sm:text-3xl md:text-4xl">
           Basic
         </h3>
@@ -118,13 +118,17 @@ const Basic = () => {
         </ul>
       </div>
 
-      <div className="container py-20 w-1/2">
+      <div className="container py-20 w-4/ md:w-1/2 ">
         <div className=" add-service px-3 bg-gray-50">
-          <h2 className="text-center text-dark m-4 fw-bold"> Purchase This</h2>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col w-2/3"
+            className="flex flex-col w-full  md:w-2/3"
           >
+            {" "}
+            <h2 className="text-center text-xl font-bold my-4 text-dark m-4 fw-bold">
+              {" "}
+              Your Information{" "}
+            </h2>
             <input
               {...register("name")}
               placeholder="Your Full Name"
@@ -135,7 +139,6 @@ const Basic = () => {
               placeholder="Your Email"
               className=" rounded-1 p-2 shadow-md"
             />
-
             <input
               {...register("country")}
               placeholder="Country"
@@ -153,20 +156,17 @@ const Basic = () => {
               placeholder="Your Phone Number"
               className=" rounded-1 p-2 shadow-md"
             />
-
             <input
               type="date"
               {...register("date")}
               placeholder="Price"
               className=" rounded-1 p-2 shadow-md"
             />
-
             <textarea
               {...register("others")}
               placeholder="Others Optional"
               className=" rounded-1 p-2 shadow-md"
             />
-
             <input
               className="bg-purple-500 text-white fw-bold  py-2 fs-5"
               type="submit"

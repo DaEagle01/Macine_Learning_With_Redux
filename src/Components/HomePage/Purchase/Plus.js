@@ -1,10 +1,35 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { selectUser } from "../../../features/user/userSlice";
 
 const Plus = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const user = useSelector(selectUser);
+  console.log(user);
+
+  const onSubmit = (data) => {
+    data.plan = "plus";
+    console.log(data);
+
+    fetch("https://serene-harbor-07790.herokuapp.com/orders", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          console.log(data.acknowledged);
+          reset();
+          alert("Congrats, Product ordered successfully!");
+        }
+      });
+  };
   return (
-    <div>
-      <div className="relative z-10 flex flex-col items-center max-w-md p-4 mx-auto my-0 border border-solid rounded-lg lg:-ml-3 sm:my-0 sm:p-6 md:my-8 md:p-8">
+    <div className="flex gap-4 md:flex-row flex-col">
+      <div className="flex flex-col items-center max-w-md p-4 mx-auto my-0 border border-solid rounded-lg  sm:my-0 sm:p-6 md:my-8 md:p-8">
         <h3 className="m-0 text-2xl font-semibold leading-tight tracking-tight text-black border-0 border-gray-200 sm:text-3xl md:text-4xl">
           Plus
         </h3>
@@ -99,6 +124,62 @@ const Plus = () => {
           {" "}
           Select Plan
         </Link>
+      </div>
+      <div className="container py-20 w-4/ md:w-1/2 ">
+        <div className=" add-service px-3 bg-gray-50">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col w-full  md:w-2/3"
+          >
+            {" "}
+            <h2 className="text-center text-xl font-bold my-4 text-dark m-4 fw-bold">
+              {" "}
+              Your Information{" "}
+            </h2>
+            <input
+              {...register("name")}
+              placeholder="Your Full Name"
+              className=" rounded-1 p-2 shadow-md "
+            />
+            <input
+              {...register("email")}
+              placeholder="Your Email"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              {...register("country")}
+              placeholder="Country"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              type="number"
+              {...register("zip")}
+              placeholder="Zip Code"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              type="number"
+              {...register("number")}
+              placeholder="Your Phone Number"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              type="date"
+              {...register("date")}
+              placeholder="Price"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <textarea
+              {...register("others")}
+              placeholder="Others Optional"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              className="bg-purple-500 text-white fw-bold  py-2 fs-5"
+              type="submit"
+            />
+          </form>
+        </div>
       </div>
     </div>
   );

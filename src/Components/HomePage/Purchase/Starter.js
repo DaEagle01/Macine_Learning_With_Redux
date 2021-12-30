@@ -1,7 +1,32 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { selectUser } from "../../../features/user/userSlice";
 
 const Starter = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const user = useSelector(selectUser);
+  console.log(user);
+
+  const onSubmit = (data) => {
+    data.plan = "starter";
+    console.log(data);
+
+    fetch("https://serene-harbor-07790.herokuapp.com/orders", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          console.log(data.acknowledged);
+          reset();
+          alert("Congrats, Product ordered successfully!");
+        }
+      });
+  };
   return (
     <div className="flex gap-4 md:flex-row flex-col">
       <div className="flex flex-col items-center max-w-md p-4 mx-auto my-0 border border-solid rounded-lg  sm:my-0 sm:p-6 md:my-8 md:p-8">
@@ -83,121 +108,60 @@ const Starter = () => {
           Select Plan
         </Link>
       </div>
-      <div class=" ">
-        <div class="py-12">
-          <div class="  mx-auto bg-white shadow-lg rounded-lg   mx-2">
-            <div class="md:flex ">
-              <div class="w-full p-4 px-5 py-5">
-                <div class="flex flex-row ">
-                  <h2 class="text-3xl font-semibold">Machine</h2>
-                  <h2 class="text-3xl text-purple-400 font-semibold">AI </h2>
-                </div>
-                <div class="flex flex-row pt-2 text-xs pt-6 pb-5">
-                  {" "}
-                  <span class="font-bold">Information</span>{" "}
-                  <small class="text-gray-400 ml-1"></small>{" "}
-                  <span class="text-gray-400 ml-1">Shopping</span>{" "}
-                  <small class="text-gray-400 ml-1"></small>{" "}
-                  <span class="text-gray-400 ml-1">Payment</span>{" "}
-                </div>{" "}
-                <span>Customer Information</span>
-                <div class="relative pb-5">
-                  {" "}
-                  <input
-                    type="text"
-                    name="mail"
-                    class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="E-mail"
-                  />{" "}
-                  <span class="absolute text-purple-500 right-2 top-4 font-medium text-sm">
-                    Log out
-                  </span>{" "}
-                </div>{" "}
-                <span>Shipping Address</span>
-                <div class="grid md:grid-cols-2 md:gap-2">
-                  {" "}
-                  <input
-                    type="text"
-                    name="mail"
-                    class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="First name*"
-                  />{" "}
-                  <input
-                    type="text"
-                    name="mail"
-                    class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="Last name*"
-                  />{" "}
-                </div>{" "}
-                <input
-                  type="text"
-                  name="mail"
-                  class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                  placeholder="Company (optional)"
-                />{" "}
-                <input
-                  type="text"
-                  name="mail"
-                  class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                  placeholder="Address*"
-                />{" "}
-                <input
-                  type="text"
-                  name="mail"
-                  class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                  placeholder="Apartment, suite, etc. (optional)"
-                />
-                <div class="grid md:grid-cols-3 md:gap-2">
-                  {" "}
-                  <input
-                    type="text"
-                    name="mail"
-                    class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="Zipcode*"
-                  />{" "}
-                  <input
-                    type="text"
-                    name="mail"
-                    class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="City*"
-                  />{" "}
-                  <input
-                    type="text"
-                    name="mail"
-                    class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                    placeholder="State*"
-                  />{" "}
-                </div>{" "}
-                <input
-                  type="text"
-                  name="mail"
-                  class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                  placeholder="Country*"
-                />{" "}
-                <input
-                  type="text"
-                  name="mail"
-                  class="border rounded h-10 w-full focus:outline-none focus:border-green-200 px-2 mt-2 text-sm"
-                  placeholder="Phone Number*"
-                />
-                <div class="flex justify-between items-center pt-2">
-                  {" "}
-                  <button
-                    type="button"
-                    class="h-12 w-24 text-purple-500 text-xs font-medium"
-                  >
-                    Return to cart
-                  </button>{" "}
-                  <button
-                    type="button"
-                    class="h-12 w-48 rounded font-medium text-xs bg-purple-500 text-white"
-                  >
-                    Continue to Shipping
-                  </button>{" "}
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="container py-20 w-4/ md:w-1/2 ">
+        <div className=" add-service px-3 bg-gray-50">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex flex-col w-full  md:w-2/3"
+          >
+            {" "}
+            <h2 className="text-center text-xl font-bold my-4 text-dark m-4 fw-bold">
+              {" "}
+              Your Information{" "}
+            </h2>
+            <input
+              {...register("name")}
+              placeholder="Your Full Name"
+              className=" rounded-1 p-2 shadow-md "
+            />
+            <input
+              {...register("email")}
+              placeholder="Your Email"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              {...register("country")}
+              placeholder="Country"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              type="number"
+              {...register("zip")}
+              placeholder="Zip Code"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              type="number"
+              {...register("number")}
+              placeholder="Your Phone Number"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              type="date"
+              {...register("date")}
+              placeholder="Price"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <textarea
+              {...register("others")}
+              placeholder="Others Optional"
+              className=" rounded-1 p-2 shadow-md"
+            />
+            <input
+              className="bg-purple-500 text-white fw-bold  py-2 fs-5"
+              type="submit"
+            />
+          </form>
         </div>
       </div>
     </div>
