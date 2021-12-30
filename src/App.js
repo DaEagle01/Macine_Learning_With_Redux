@@ -11,8 +11,12 @@ import Register from "./Components/Authentication/Register/Register";
 import Starter from "./Components/HomePage/Purchase/Starter";
 import Basic from "./Components/HomePage/Purchase/Basic";
 import Plus from "./Components/HomePage/Purchase/Plus";
+import { useSelector } from "react-redux";
+import { selectUser } from "./features/user/userSlice";
 
 function App() {
+  const user = useSelector(selectUser);
+  console.log(user);
   return (
     <div>
       <BrowserRouter>

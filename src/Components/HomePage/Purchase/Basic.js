@@ -1,29 +1,30 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../features/user/userSlice";
 
 const Basic = () => {
   const { register, handleSubmit, reset } = useForm();
+  const user = useSelector(selectUser);
+  console.log(user);
 
   const onSubmit = (data) => {
-    // console.log(data);
-    // data.img = product.img;
-    // data.bikeName = product.name;
-    // data.status = "pending";
+    data.plan = "basic";
     console.log(data);
 
-    // fetch(`http://localhost:5000/products/${id}`, {
-    //   method: "POST",
-    //   headers: { "content-type": "application/json" },
-    //   body: JSON.stringify(data),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (data.acknowledged) {
-    //       alert("Congrats, Product ordered successfully!");
-    //       reset();
-    //     }
-    //   });
+    fetch("http://localhost:5000/orders", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.acknowledged) {
+          console.log(data.acknowledged);
+          reset();
+          alert("Congrats, Product ordered successfully!");
+        }
+      });
   };
   return (
     <div className="flex justify-center items-center">
@@ -115,13 +116,6 @@ const Basic = () => {
             Premium Support
           </li>
         </ul>
-        <Link
-          to="/basicplan"
-          className="inline-flex justify-center w-full px-4 py-3 mt-8 font-sans text-sm leading-none text-center text-white no-underline bg-purple-600 border rounded-md cursor-pointer hover:bg-purple-700 hover:border-purple-700 hover:text-white focus-within:bg-purple-700 focus-within:border-purple-700 focus-within:text-white sm:text-base md:text-lg"
-        >
-          {" "}
-          Select Plan
-        </Link>
       </div>
 
       <div className="container py-20 w-1/2">
@@ -141,16 +135,7 @@ const Basic = () => {
               placeholder="Your Email"
               className=" rounded-1 p-2 shadow-md"
             />
-            <input
-              {...register("street")}
-              placeholder="Street"
-              className=" rounded-1 p-2 shadow-md"
-            />
-            <input
-              {...register("city")}
-              placeholder="City"
-              className=" rounded-1 p-2 shadow-md"
-            />
+
             <input
               {...register("country")}
               placeholder="Country"
@@ -175,15 +160,6 @@ const Basic = () => {
               placeholder="Price"
               className=" rounded-1 p-2 shadow-md"
             />
-
-            <select
-              {...register("Tickets Type")}
-              className=" rounded-1 p-2 shadow-md"
-              label="Tickets Type"
-            >
-              <option value="Normal Delivery">Normal Delivery</option>
-              <option value="Super Fast Delivery">Super Fast Delivery</option>
-            </select>
 
             <textarea
               {...register("others")}

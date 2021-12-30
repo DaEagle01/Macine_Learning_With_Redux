@@ -14,6 +14,7 @@ initializeAuthentication();
 
 const Register = () => {
   const user = useSelector(selectUser);
+  // console.log(user);
   const [data, setData] = useState({});
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
